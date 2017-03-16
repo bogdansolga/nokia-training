@@ -22,7 +22,7 @@ public class Java8Features {
         //typedFunctionalInterfaces();
 
         CompletableFuture<String> completableFuture =
-                CompletableFuture.supplyAsync(() -> "It works");
+                CompletableFuture.supplyAsync(() -> "It works NEW TEXT FOR TEST");
         System.out.println(completableFuture.get());
     }
 
