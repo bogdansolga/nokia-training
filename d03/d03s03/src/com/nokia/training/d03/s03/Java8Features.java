@@ -24,6 +24,7 @@ public class Java8Features {
         CompletableFuture<String> completableFuture =
                 CompletableFuture.supplyAsync(() -> "It works");
         System.out.println(completableFuture.get());
+        System.out.println("Push");
     }
 
     private static void typedFunctionalInterfaces() {
