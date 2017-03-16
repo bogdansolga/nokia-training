@@ -44,6 +44,7 @@ public class Product implements Comparable<Product>, Serializable {
     }
 
     public String toString() {
+        //return "The product has the ID " + id + ", the name '" + name + "' and the price " + price;
         return id + "-" + name + "-" + price;
     }
 
