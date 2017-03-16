@@ -20,7 +20,8 @@ public class Java8Features {
 
         //biFunctionalInterfaces();
         //typedFunctionalInterfaces();
-
+        System.out.println("test");
+        System.out.println("djsafjdddaskdjas");
         CompletableFuture<String> completableFuture =
                 CompletableFuture.supplyAsync(() -> "It works");
         System.out.println(completableFuture.get());
