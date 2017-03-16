@@ -18,17 +18,13 @@ public class Java8Features {
         //functions();
         //suppliers();
 
-        biFunctionalInterfaces();
-        typedFunctionalInterfaces();
-        testFork();
+        //biFunctionalInterfaces();
+        //typedFunctionalInterfaces();
+
         CompletableFuture<String> completableFuture =
                 CompletableFuture.supplyAsync(() -> "There I fixed it!!!");
         System.out.println(completableFuture.get());
         System.out.println("Push");
-    }
-
-    private static void testFork() {
-        System.out.println("Pull request!");
     }
 
     private static void typedFunctionalInterfaces() {
