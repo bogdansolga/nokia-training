@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project name="Ant intro" default="main" basedir=".">
+    <!-- the value of a property is accessed via ${} -->
+    <property name="source.dir" location="src"/>
+    <property name="build.dir" location="bin"/>
+    <property name="dist.dir" location="dist"/>
+
+    <!-- deletes the existing build, docs and dist directory-->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <!-- creates the build and dist directories -->
+    <target name="make.dir">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <!-- compiles the code -->
+    <target name="compile" depends="clean, make.dir">
+        <javac srcdir="${source.dir}" destdir="${build.dir}">
+        </javac>
+    </target>
+
+    <!-- creates the .jar file -->
+    <target name="jar" depends="compile">
+        <jar destfile="${dist.dir}\com.nokia.training.d05.s01.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="com.nokia.training.d05.s01.AntIntro" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="main" depends="compile, jar">
+        <description>Main target</description>
+    </target>
+</project>
