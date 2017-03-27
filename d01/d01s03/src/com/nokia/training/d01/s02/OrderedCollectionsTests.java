@@ -18,7 +18,7 @@ public class OrderedCollectionsTests {
         stock.put(new Product(20, "x", 10), 20);
         stock.put(new Product(50, "y", 20), 10);
         stock.put(new Product(10, "z", 50), 30);
-
+        stock.put(new Product(40, "Treemap", 50), 30);
         for (Product product : stock.keySet()) {
             System.out.println(product + " -> " + stock.get(product));
         }
